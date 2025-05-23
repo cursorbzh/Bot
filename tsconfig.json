@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "incremental": false,
+    "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
+    "noEmit": true,
+    "outDir": "./dist/server",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "strict": true,
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "types": ["node", "vite/client"],
+    "paths": {
+      "@shared/*": ["./shared/*"]
+    },
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": false,
+    "allowImportingTsExtensions": false,
+    "emitDeclarationOnly": false
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifier": true
+  },
+  "include": ["server/**/*", "shared/**/*", "types.d.ts", "client/**/*"],
+  "exclude": ["node_modules", "build", "dist", "**/*.test.ts"]
+}
